@@ -1,23 +1,8 @@
 const mongoose = require("mongoose");
 
-const habitSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true
-    },
-    frequency: {
-      type: String,
-      enum: ["daily", "weekly"],
-      default: "daily"
-    },
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true
-    }
-  },
-  { timestamps: true }
-);
+const HabitSchema = new mongoose.Schema({
+  name: String,
+  status: String
+});
 
-module.exports = mongoose.model("Habit", habitSchema);
+module.exports = mongoose.model("Habit", HabitSchema);

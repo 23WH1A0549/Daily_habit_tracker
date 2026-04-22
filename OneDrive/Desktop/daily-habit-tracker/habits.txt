@@ -1,0 +1,5 @@
+Habit: Study
+Status: Completed
+
+Habit: Exercise
+Status: Pending
